@@ -8,7 +8,6 @@
            $ roslaunch kinect2_bridge kinect2_bridge.launch publish_tf:=true
            $ roslaunch rtabmap_ros rgbd_mapping_kinect2.launch
    -->
-
    <!-- Which image resolution to process in rtabmap: sd, qhd, hd -->
    <arg name="resolution" default="qhd" />
    
