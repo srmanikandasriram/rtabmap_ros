@@ -111,7 +111,7 @@ CoreWrapper::CoreWrapper(bool deleteDbOnStart) :
 	bool subscribeStereo = false;
 	int queueSize = 10;
 	bool publishTf = true;
-	double tfDelay = 0.05; // 20 Hz
+	double tfDelay = 0.11; // 20 Hz
 	bool stereoApproxSync = false;
 
 	// ROS related parameters (private)

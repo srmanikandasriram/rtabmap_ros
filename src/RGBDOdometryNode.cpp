@@ -29,7 +29,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include <message_filters/subscriber.h>
 #include <message_filters/time_synchronizer.h>
-#include <message_filters/sync_policies/approximate_time.h>
+#include <message_filters/sync_policies/exact_time.h>
 
 #include <image_transport/image_transport.h>
 #include <image_transport/subscriber_filter.h>
@@ -161,7 +161,6 @@ public:
 						1.0f,
 						0,
 						rtabmap_ros::timestampFromROS(image->header.stamp));
-
 				this->processData(data, image->header);
 			}
 		}
@@ -171,7 +170,7 @@ private:
 	image_transport::SubscriberFilter image_mono_sub_;
 	image_transport::SubscriberFilter image_depth_sub_;
 	message_filters::Subscriber<sensor_msgs::CameraInfo> info_sub_;
-	typedef message_filters::sync_policies::ApproximateTime<sensor_msgs::Image, sensor_msgs::Image, sensor_msgs::CameraInfo> MySyncPolicy;
+	typedef message_filters::sync_policies::ExactTime<sensor_msgs::Image, sensor_msgs::Image, sensor_msgs::CameraInfo> MySyncPolicy;
 	message_filters::Synchronizer<MySyncPolicy> * sync_;
 };
 
