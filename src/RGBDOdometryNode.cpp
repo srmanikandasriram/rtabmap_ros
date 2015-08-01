@@ -392,14 +392,10 @@ private:
 	image_transport::SubscriberFilter image_mono_sub_;
 	image_transport::SubscriberFilter image_depth_sub_;
 	message_filters::Subscriber<sensor_msgs::CameraInfo> info_sub_;
-<<<<<<< HEAD
-	typedef message_filters::sync_policies::ExactTime<sensor_msgs::Image, sensor_msgs::Image, sensor_msgs::CameraInfo> MySyncPolicy;
-=======
 	image_transport::SubscriberFilter image_mono2_sub_;
 	image_transport::SubscriberFilter image_depth2_sub_;
 	message_filters::Subscriber<sensor_msgs::CameraInfo> info2_sub_;
 	typedef message_filters::sync_policies::ApproximateTime<sensor_msgs::Image, sensor_msgs::Image, sensor_msgs::CameraInfo> MySyncPolicy;
->>>>>>> origin/master
 	message_filters::Synchronizer<MySyncPolicy> * sync_;
 	typedef message_filters::sync_policies::ApproximateTime<sensor_msgs::Image, sensor_msgs::Image, sensor_msgs::CameraInfo, sensor_msgs::Image, sensor_msgs::Image, sensor_msgs::CameraInfo> MySync2Policy;
 	message_filters::Synchronizer<MySync2Policy> * sync2_;
