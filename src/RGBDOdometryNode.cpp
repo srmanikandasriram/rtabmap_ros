@@ -29,7 +29,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include <message_filters/subscriber.h>
 #include <message_filters/time_synchronizer.h>
-#include <message_filters/sync_policies/exact_time.h>
+#include <message_filters/sync_policies/approximate_time.h>
 
 #include <image_transport/image_transport.h>
 #include <image_transport/subscriber_filter.h>
